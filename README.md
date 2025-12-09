@@ -1,10 +1,3 @@
-# Asset Management Assignment - WS25/26
-
-**Student ID:** 244604  
-**Student Name:** Sakila Akter Tania
-
----
-
 ## Project Overview
 
 This project implements a comprehensive asset pricing analysis for **5 Spanish stocks** listed on the Madrid Stock Exchange (IBEX 35 components), using two fundamental models from financial economics:
@@ -113,7 +106,7 @@ model = sm.OLS(y, X).fit()
 
 **What the code does:**
 - Extends CAPM by adding **size (SMB)** and **value (HML)** factors
-- Provides more complete picture of what drives stock returns
+- Provides a more complete picture of what drives stock returns
 
 **FF3 Equation:**
 ```
@@ -171,7 +164,7 @@ E(R_i) - R_f = α_i + β₁×(R_m - R_f) + β₂×SMB + β₃×HML
    - **HML coefficient = 1.55** (highly significant)
    - This means BKT behaves like a **value stock**
    - R² jumps from 14.5% (CAPM) to 49.5% (FF3) - size/value factors explain a lot!
-   - Alpha drops (from 2.3% to 1.1%) - part of CAPM alpha was actually value premium
+   - Alpha drops (from 2.3% to 1.1%) - part of the CAPM alpha was actually value premium
 
 2. **Acciona (ANA.MC) & Colonial (COL.MC)** - Small-Cap Behavior
    - High positive SMB coefficients (1.13 and 1.69)
@@ -180,13 +173,13 @@ E(R_i) - R_f = α_i + β₁×(R_m - R_f) + β₂×SMB + β₃×HML
 
 3. **Enagás (ENG.MC) & Logista (LOG.MC)** - Pure Market Plays
    - SMB and HML coefficients near zero
-   - Returns mostly explained by market factor alone
+   - Returns are mostly explained by market factors alone
    - FF3 provides minimal improvement over CAPM
 
 4. **Model Improvement:**
    - COL.MC: R² increases from 46% → 61% with FF3
    - BKT.MC: R² increases from 14.5% → 49.5% with FF3
-   - This shows size/value factors add significant explanatory power
+   - This shows that size/value factors add significant explanatory power
 
 ---
 
@@ -204,18 +197,18 @@ E(R_i) - R_f = α_i + β₁×(R_m - R_f) + β₂×SMB + β₃×HML
 
 1. **Acciona (ANA.MC)** - Dominant performer (green line at top)
    - Prices ranging from ~€95 to €200
-   - Significant volatility with peak around mid-2022 (~€190)
-   - Strong recovery in 2025 reaching new highs
+   - Significant volatility with a peak around mid-2022 (~€190)
+   - Strong recovery in 2025, reaching new highs
    - Clear cyclical pattern with construction/infrastructure cycles
 
 2. **Other stocks (BKT, ENG, COL, LOG)** - Similar price ranges
    - All trading between €5-30
    - Much lower absolute volatility
-   - Logista (LOG.MC) shows steady upward trend since 2023
+   - Logista (LOG.MC) shows a steady upward trend since 2023
 
 3. **Scale difference:**
    - ANA.MC trades at ~10x the price of other stocks
-   - This doesn't mean it's a "better" stock - just different price level
+   - This doesn't mean it's a "better" stock - just a  different price level
    - Return analysis (CAPM/FF3) is the proper comparison method
 
 ### 2. Jointplots (figures/jointplot_*.png)
@@ -224,7 +217,7 @@ These scatterplots visualize the **relationship between each stock's returns and
 
 #### BKT.MC vs IBEX
 - **Moderate positive correlation** with significant scatter
-- Wide dispersion around regression line indicates idiosyncratic risk
+- Wide dispersion around the regression line indicates idiosyncratic risk
 - Some extreme negative outliers (~-20%) show banking sector volatility
 
 #### ENG.MC vs IBEX  
@@ -235,7 +228,7 @@ These scatterplots visualize the **relationship between each stock's returns and
 #### ANA.MC vs IBEX
 - **Strong positive relationship** visible
 - More scatter than ENG, reflecting construction sector volatility
-- Some outliers but generally follows market direction
+- Some outliers, but generally follows market direction
 
 #### COL.MC vs IBEX
 - **Steepest regression line** (highest beta)
@@ -245,7 +238,7 @@ These scatterplots visualize the **relationship between each stock's returns and
 #### LOG.MC vs IBEX
 - **Moderate slope with good dispersion**
 - Distribution services provide some defensive characteristics
-- One significant outlier (~-11%) doesn't affect overall trend
+- One significant outlier (~-11%) doesn't affect the overall trend
 
 ---
 
@@ -338,7 +331,7 @@ This analysis demonstrates that:
 4. **Colonial is the most market-sensitive** stock, suitable for aggressive strategies
 5. **Enagás and Logista are defensive plays** with minimal exposure to size/value factors
 
-The methodology follows standard academic practice and the results align with economic intuition about the characteristics of each sector.
+The methodology adheres to standard academic practice, and the results align with economic intuition regarding the characteristics of each sector.
 
 ---
 
